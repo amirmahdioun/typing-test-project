@@ -54,10 +54,11 @@ function updateWpm() {
   // TODO: Complete this function
 }
 
-function updateTimer(timeLeft,timeElapsed,wpm) {
+function updateTimer(timeLeft,timeElapsed) {
     if(timeLeft > 0){
         timeElapsed ++
         timeLeft --
+        let wpm = updateWpm(typedCharacter,timeElapsed);
         timerText.innerText = `${timeLeft}`;
         wpmText.innerText = `${wpm}`;
     }else{

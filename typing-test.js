@@ -51,7 +51,7 @@ function updateAccuracy(textChars, errors) {
   typedCharacter = textChars.length;
 
   let accuracy = ((typedCharacter - errors) / typedCharacter) * 100;
-  accuracy = Math.floor(accuracy);
+  accuracy = Math.round(accuracy);
   return accuracy;
 }
 
@@ -63,7 +63,7 @@ function updateWpm(typedCharacter, timeElapsed) {
   // TODO: Complete this function
 
   let wpm = (typedCharacter / 5 / timeElapsed) * 60;
-  wpm = Math.floor(wpm);
+  wpm = Math.round(wpm);
   return wpm;
 }
 

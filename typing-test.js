@@ -40,6 +40,19 @@ function update() {
 
 function updateCharactersStatus() {
   // TODO: Complete this function
+  const char = document.querySelectorAll('#type-text span');
+  const text = document.querySelector('#textarea').value;
+  const textChars = text.trim().split('');
+  for(i of char){
+    console.log(i.innerHTML)
+  }
+  console.log(text);
+  console.log(textChars);
+
+  // const chars
+  // for(char of chars){
+  //   if
+  // }
 }
 
 function updateAccuracy() {

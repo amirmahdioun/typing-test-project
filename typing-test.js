@@ -11,7 +11,7 @@ let typeText = document.getElementById("type-text");
 
 let textArea = document.getElementById("textarea");
 
-let timeLeft = 0;
+let timeLeft = 60;
 let timeElapsed = 0;
 let errors = 0;
 let accuracy = 0;
@@ -55,7 +55,14 @@ function updateWpm() {
 }
 
 function updateTimer() {
-  // TODO: Complete this function
+    if(timeLeft > 0){
+        timeElapsed ++
+        timeLeft --
+        timerText.innerText = `${timeLeft}`;
+        wpmText.innerText = `${wpm}`;
+    }else{
+        alert('Exam finished')
+    }
 }
 
 function finishTest() {

@@ -29,7 +29,7 @@ function initializeTest({ timeLimit, text }) {
 
 function update() {
   if (!hasStarted) {
-    timer = setInterval(updateTimer(timeLeft,timeElapsed,wpm), 1000);
+    timer = setInterval(updateTimer(timeLeft,timeElapsed,timer), 1000);
     hasStarted = true;
   }
   typedCharacter++;

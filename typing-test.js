@@ -54,7 +54,7 @@ function updateWpm() {
   // TODO: Complete this function
 }
 
-function updateTimer(timeLeft,timeElapsed) {
+function updateTimer(timeLeft,timeElapsed,timer) {
     if(timeLeft > 0){
         timeElapsed ++
         timeLeft --
@@ -62,7 +62,7 @@ function updateTimer(timeLeft,timeElapsed) {
         timerText.innerText = `${timeLeft}`;
         wpmText.innerText = `${wpm}`;
     }else{
-        alert('Exam finished')
+        finishTest(timer)
     }
 }
 

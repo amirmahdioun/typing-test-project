@@ -29,7 +29,7 @@ function initializeTest({ timeLimit, text }) {
 
 function update() {
   if (!hasStarted) {
-    timer = setInterval(updateTimer(timeLeft,timeElapsed,timer), 1000);
+    timer = setInterval(updateTimer, 1000);
     hasStarted = true;
   }
   typedCharacter++;
@@ -54,7 +54,7 @@ function updateWpm() {
   // TODO: Complete this function
 }
 
-function updateTimer(timeLeft,timeElapsed,timer) {
+function updateTimer() {
     if(timeLeft > 0){
         timeElapsed ++
         timeLeft --
@@ -62,7 +62,7 @@ function updateTimer(timeLeft,timeElapsed,timer) {
         timerText.innerText = `${timeLeft}`;
         wpmText.innerText = `${wpm}`;
     }else{
-        finishTest(timer)
+        finishTest()
     }
 }
 

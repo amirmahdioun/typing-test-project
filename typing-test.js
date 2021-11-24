@@ -60,17 +60,17 @@ function updateCharactersStatus() {
 
 function updateAccuracy(textChars, errors) {
   // TODO: Complete this function
-  let typedCharacter, errors, text;
+  // let typedCharacter, text;
   // typedCharacter = document.getElementById("#textarea");
   // text = typedCharacter.innerText || typedCharacter.textContent;
   // text = text.trim("");
-  typedCharacter = textChars.length;
+  // typedCharacter = textChars.length;
 
   let accuracy = ((typedCharacter - errors) / typedCharacter) * 100;
   accuracy = Math.round(accuracy);
   return accuracy;
 }
-console.log(updateAccuracy());
+
 
 function updateErrors(errors) {
   // TODO: Complete this function

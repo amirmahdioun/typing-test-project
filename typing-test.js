@@ -58,16 +58,16 @@ function updateCharactersStatus() {
   errorText.innerHTML = errors;
 }
 
-function updateAccuracy() {
+function updateAccuracy(textChars, errors) {
   // TODO: Complete this function
   let typedCharacter, errors, text;
-  typedCharacter = document.getElementById("#textarea");
-  text = typedCharacter.innerText || typedCharacter.textContent;
-  text = text.trim("");
-  typedCharacter = text.length;
+  // typedCharacter = document.getElementById("#textarea");
+  // text = typedCharacter.innerText || typedCharacter.textContent;
+  // text = text.trim("");
+  typedCharacter = textChars.length;
 
-  let accuracy = ((typedCharacter - 0) / typedCharacter) * 100;
-  accuracy = Math.trunc(accuracy) + 1;
+  let accuracy = ((typedCharacter - errors) / typedCharacter) * 100;
+  accuracy = Math.round(accuracy);
   return accuracy;
 }
 console.log(updateAccuracy());
@@ -81,7 +81,7 @@ function updateWpm(typedCharacter, timeElapsed) {
   // TODO: Complete this function
 
   let wpm = (typedCharacter / 5 / timeElapsed) * 60;
-  wpm = Math.floor(wpm);
+  wpm = Math.round(wpm);
   return wpm;
 }
 

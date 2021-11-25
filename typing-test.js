@@ -60,11 +60,9 @@ function updateCharactersStatus() {
 
 function updateAccuracy(textChars, errors) {
   // TODO: Complete this function
-  // let typedCharacter, text;
-  // typedCharacter = document.getElementById("#textarea");
-  // text = typedCharacter.innerText || typedCharacter.textContent;
-  // text = text.trim("");
-  // typedCharacter = textChars.length;
+  let typedCharacter, errors, text;
+
+  typedCharacter = textChars.length;
 
   let accuracy = ((typedCharacter - errors) / typedCharacter) * 100;
   accuracy = Math.round(accuracy);

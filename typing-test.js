@@ -46,7 +46,6 @@ function updateAccuracy(textChars, errors) {
   // TODO: Complete this function
 
   let typedCharacter = textChars.length;
-
   let accuracy = ((typedCharacter - errors) / typedCharacter) * 100;
   accuracy = Math.round(accuracy);
   return accuracy;

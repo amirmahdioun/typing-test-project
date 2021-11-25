@@ -44,13 +44,7 @@ function updateCharactersStatus() {
 
 function updateAccuracy(textChars, errors) {
   // TODO: Complete this function
-  let typedCharacter, errors, text;
-
-  typedCharacter = textChars.length;
-
-  let accuracy = ((typedCharacter - errors) / typedCharacter) * 100;
-  accuracy = Math.round(accuracy);
-  return accuracy;
+  accuracyText.innerHTML = Math.round(((typedCharacter - errors)/typedCharacter)*100);
 }
 
 function updateErrors() {

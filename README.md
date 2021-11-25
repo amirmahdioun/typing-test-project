@@ -13,4 +13,4 @@ Test your type speed in 60s
 You can add your own text from "typing-test.js" line 3
 
 
-[Click here to view DEMO](https://http://amirmahdioun.github.io/typing-test-project)
+[Click here to view DEMO](https://amirmahdioun.github.io/typing-test-project)

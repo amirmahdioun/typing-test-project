@@ -11,7 +11,7 @@ let typeText = document.getElementById("type-text");
 
 let textArea = document.getElementById("textarea");
 
-let timeLeft = 60;
+let timeLeft = 0;
 let timeElapsed = 0;
 let errors = 0;
 let accuracy = 0;
@@ -64,8 +64,9 @@ function updateCharactersStatus() {
   errors = document.querySelectorAll('.incorrect-char').length;
 }
 
-function updateAccuracy() {
+function updateAccuracy(textChars, errors) {
   // TODO: Complete this function
+  accuracyText.innerHTML = Math.round(((typedCharacter - errors)/typedCharacter)*100);
 }
 
 function updateErrors(errors) {
@@ -77,7 +78,7 @@ function updateWpm(typedCharacter, timeElapsed) {
   // TODO: Complete this function
 
   let wpm = (typedCharacter / 5 / timeElapsed) * 60;
-  wpm = Math.floor(wpm);
+  wpm = Math.round(wpm);
   return wpm;
 }
 

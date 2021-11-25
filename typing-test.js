@@ -96,4 +96,6 @@ function updateTimer() {
 
 function finishTest() {
   // TODO: Complete this function
+  clearTimeout(timer);
+  textArea.disabled = true;
 }

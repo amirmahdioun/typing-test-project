@@ -41,7 +41,7 @@ function update() {
   }
   typedCharacter++;
   updateCharactersStatus();
-  updateErrors();
+  updateErrors(errors);
   updateAccuracy();
 }
 
@@ -68,8 +68,9 @@ function updateAccuracy() {
   // TODO: Complete this function
 }
 
-function updateErrors() {
+function updateErrors(errors) {
   // TODO: Complete this function
+    errorText.innerText = `${errors}`;
 }
 
 function updateWpm(typedCharacter, timeElapsed) {

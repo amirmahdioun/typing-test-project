@@ -60,7 +60,7 @@ function updateCharactersStatus() {
 
 function updateAccuracy(textChars, errors) {
   // TODO: Complete this function
-  let typedCharacter, errors, text;
+  // let typedCharacter, errors, text;
 
   typedCharacter = textChars.length;
 

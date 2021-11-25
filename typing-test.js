@@ -55,7 +55,6 @@ function updateCharactersStatus() {
     }
   });
   errors = document.querySelectorAll('.incorrect-char').length;
-  errorText.innerHTML = errors;
 }
 
 function updateAccuracy() {

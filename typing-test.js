@@ -64,8 +64,9 @@ function updateCharactersStatus() {
   errors = document.querySelectorAll('.incorrect-char').length;
 }
 
-function updateAccuracy(textChars, errors) {
+function updateAccuracy() {
   // TODO: Complete this function
+    console.log(typeof errors)
   accuracyText.innerHTML = Math.round(((typedCharacter - errors)/typedCharacter)*100);
 }
 

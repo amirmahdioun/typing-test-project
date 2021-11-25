@@ -72,8 +72,12 @@ function updateErrors() {
   // TODO: Complete this function
 }
 
-function updateWpm() {
+function updateWpm(typedCharacter, timeElapsed) {
   // TODO: Complete this function
+
+  let wpm = (typedCharacter / 5 / timeElapsed) * 60;
+  wpm = Math.floor(wpm);
+  return wpm;
 }
 
 function updateTimer() {

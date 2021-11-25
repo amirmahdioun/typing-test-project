@@ -25,13 +25,6 @@ textArea.addEventListener("input", update);
 
 function initializeTest({ timeLimit, text }) {
   // TODO: Complete this function
-  for (let i = 0; i < text.length; i++) {
-    let tempSpan = document.createElement("span");
-    tempSpan.innerHTML = text[i];
-    typeText.appendChild(tempSpan);
-  }
-  timerText.innerHTML = timeLimit;
-  timeLeft = TIME_LIMIT;
 }
 
 function update() {
@@ -41,38 +34,25 @@ function update() {
   }
   typedCharacter++;
   updateCharactersStatus();
-  updateErrors(errors);
+  updateErrors();
   updateAccuracy();
 }
 
 function updateCharactersStatus() {
   // TODO: Complete this function
-  const chars = document.querySelectorAll('#type-text span');
-  // const text = document.querySelector('#textarea').value;
-  const textChars = textArea.value.trim().split('');
-  chars.forEach((item,index) =>{
-    if(textChars[index] === item.innerHTML){
-      item.classList.add('correct-char');
-      item.classList.remove('incorrect-char');
-    }else if(textChars[index] == null){
-      item.classList.remove('correct-char','incorrect-char');
-    }else{
-      item.classList.add('incorrect-char');
-      item.classList.remove('correct-char');
-    }
-  });
-  errors = document.querySelectorAll('.incorrect-char').length;
 }
 
-function updateAccuracy() {
+function updateAccuracy(textChars, errors) {
   // TODO: Complete this function
-    console.log(typeof errors)
-  accuracyText.innerHTML = Math.round(((typedCharacter - errors)/typedCharacter)*100);
+
+  let typedCharacter = textChars.length;
+  let accuracy = ((typedCharacter - errors) / typedCharacter) * 100;
+  accuracy = Math.round(accuracy);
+  return accuracy;
 }
 
-function updateErrors(errors) {
+function updateErrors() {
   // TODO: Complete this function
-    errorText.innerText = `${errors}`;
 }
 
 function updateWpm(typedCharacter, timeElapsed) {
@@ -84,19 +64,9 @@ function updateWpm(typedCharacter, timeElapsed) {
 }
 
 function updateTimer() {
-    if(timeLeft > 0){
-        timeElapsed ++
-        timeLeft --
-        let wpm = updateWpm(typedCharacter,timeElapsed);
-        timerText.innerText = `${timeLeft}`;
-        wpmText.innerText = `${wpm}`;
-    }else{
-        finishTest()
-    }
+  // TODO: Complete this function
 }
 
 function finishTest() {
   // TODO: Complete this function
-  clearTimeout(timer);
-  textArea.disabled = true;
 }
